@@ -1,20 +1,16 @@
---Vardai ir pavardės skaitytojų,
---kurie yra paėmę mažiau knygų už visų
---skaitytojų paimtų knygų vidurkį.
---Greta pateikti ir paimtų egzempliorių skaičių.
-
-
-with Count as(
-    select count(egzempliorius)
+--Vardai ir pavardes skaitytoju,
+--kurie yra paeme maziau knygu uz visu
+--skaitytoju paimtu knygu vidurki
+--Greta pateikti ir paimtu egzemplioriu skaiciu
+with Visu (Vardas, Pavarde, Skaicius) as(
+    select Vardas, Pavarde, count(egzempliorius)
     from stud.egzempliorius, stud.skaitytojas
     where egzempliorius.skaitytojas = skaitytojas.nr
-    group by Skaitytojas.Vardas, Skaitytojas.Pavarde)
+    group by Skaitytojas.Vardas, Skaitytojas.Pavarde),
     
-select Vardas, Pavarde, count(distinct egzempliorius)
-from stud.egzempliorius, stud.skaitytojas, Count
-where egzempliorius.skaitytojas = skaitytojas.nr
-group by Skaitytojas.Vardas, Skaitytojas.Pavarde
-having count(distinct egzempliorius) < avg(Count);
-
-
-
+    VisuVidurkis (Vidurkis) as(
+    select avg(Skaicius) from Visu)
+    
+select Vardas, Pavarde, Skaicius, round(Vidurkis, 2)
+from Visu, VisuVidurkis
+where Skaicius < Vidurkis;
