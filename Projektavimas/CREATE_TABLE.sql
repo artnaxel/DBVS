@@ -12,7 +12,7 @@ CREATE TABLE alko8100.gydytojas (
 
 CREATE TABLE alko8100.apsilankymas (
 
-    Nr          SERIAL      NOT NULL,
+    Nr          INTEGER      NOT NULL,
     Pacientas   CHAR(11)    NOT NULL,
     Gydytojas   CHAR(11)    NOT NULL,
     Laikas      TIME        NOT NULL,
@@ -25,7 +25,7 @@ CREATE TABLE alko8100.apsilankymas (
 
 CREATE TABLE alko8100.priezastis (
 
-    Apsilankymas    SERIAL          NOT NULL,
+    Apsilankymas    INTEGER          NOT NULL,
     Liga            VARCHAR(20)     NOT NULL,
     Pavadinimas     VARCHAR(20)     NOT NULL,
 
