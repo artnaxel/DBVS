@@ -1,5 +1,5 @@
-CREATE UNIQUE INDEX IndexGydytojui
-ON alko8100.gydytojas(Vardas, Pavarde, Pareigos);
+CREATE UNIQUE INDEX IndexLigai
+ON alko8100.liga(Pavadinimas);
 
 CREATE INDEX IndexPacientui
 ON alko8100.pacientas(Vardas, Pavarde);
