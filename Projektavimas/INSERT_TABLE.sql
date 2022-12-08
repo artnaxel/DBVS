@@ -2,6 +2,7 @@ INSERT INTO alko8100.gydytojas VALUES('34893769777', 'Jonas', 'Petraitis','Seimo
 INSERT INTO alko8100.gydytojas VALUES('17233615445', 'Milda', 'Jonaitiene','Onkologas', 3000);
 INSERT INTO alko8100.gydytojas VALUES('63282957563', 'Agne', 'Jonaityte','Odontologas', 4000);
 INSERT INTO alko8100.gydytojas VALUES('50303010222', 'Arnas', 'Matulaitis', 'Chirurgas', 3500);
+INSERT INTO alko8100.gydytojas VALUES('40303030333', 'Dominykas', 'Dominikavicius', 'Odontologas', 6000);
 
 INSERT INTO alko8100.pacientas VALUES('35420123385', 'Linas', 'Zilinskas', '2003-03-20', 'Vyras','37046505391');
 INSERT INTO alko8100.pacientas VALUES('81001028285', 'Grazina', 'Zagorskyte', '2001-04-17', 'Moteris','37063700561');
